@@ -1,0 +1,367 @@
+/* fonts  */
+@font-face {
+  font-family: myfont;
+  src: url('../E-commerce/bootstrap-5.3.0-alpha3-dist/fonts/Nunito-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: iron man;
+  src: url(bootstrap-5.3.0-alpha3-dist/fonts/iron-man-of-war-2-ncv-font/IronManOfWar2Ncv-E85l.ttf);
+}
+
+
+nav {
+  background: hsla(332, 53%, 82%, 1);
+
+}
+
+.categories{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cat{
+    font-family: myfont;
+}
+
+.comics{
+  padding: 0px;
+  background-image: url("https://i.pinimg.com/564x/53/82/4f/53824f632c33b456e0cce00bc974607e.jpg");
+  
+}
+#comicbook{
+  backdrop-filter: blur(3px);
+  font-family: monospace;
+  color: yellow;
+  
+}
+
+
+
+/* card  */
+.category {
+    width: px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .category h2 {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .category::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .category::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  
+
+  /* clothes page card  */
+.dressclr{
+  font-family: monospace;
+}
+
+/* button  */
+.uiverse {
+  position: relative;
+  background: #ffffff;
+  color: #000;
+  /* padding: 15px;
+  margin: 10px; */
+  border-radius: 10px;
+  height: 50px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 10px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.uiverse:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+svg:hover span,
+svg:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.uiverse:hover,
+.uiverse:hover .tooltip,
+.uiverse:hover .tooltip::before {
+  background: #457fca;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+}
+.cart:hover,.cart:hover .tooltip ,
+.cart:hover .tooltip::before{
+  background: #F00000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DC281E, #F00000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+  html{
+    scroll-behavior: smooth;
+  }
+  
+
+  /* login css  */
+  .login{
+
+    background: #c2e59c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
+
+
+
+  /* Payments module  */
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+
+
+/*Card containing 2 cards*/
+.card0 {
+	margin: 40px 12px 15px 12px;
+	border: 0;
+}
+
+/*Left Side card*/
+.card1 {
+	margin: 0;
+	padding: 15px;
+	padding-top: 25px;
+	padding-bottom: 0px;
+	background: #263238;
+	height: 100%;
+}
+
+.bill-head {
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 30px;
+}
+
+.line {
+	border-right: 1px grey solid;
+}
+
+.bill-date {
+	color: #BDBDBD;
+}
+
+.red-bg {
+	margin-top: 25px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #F44336;
+	padding-left: 20px !important;
+	padding: 25px 10px 25px 15px;
+}
+
+#total {
+	margin-top: 0px;
+	padding-left: 7px;
+}
+
+#total-label {
+	margin-bottom: 0px;
+	color: #ffffff;
+	padding-left: 7px;
+}
+
+#heading1 {
+	color: #ffffff;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+#heading2 {
+	font-size: 27px;
+	color: #D50000;
+}
+
+/*For font-awesome icons in Placeholder*/
+.placeicon {
+	font-family: fontawesome !important;
+}
+
+/*Right Side Card*/
+.card2 {
+	padding: 25px;
+	margin: 0;
+	height: 100%;
+}
+
+.form-card .pay {
+	font-weight: bold;
+}
+
+.form-card input, .form-card textarea {
+    padding: 10px 8px 10px 8px;
+    border: none;
+    border: 1px solid lightgrey;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.form-card input:focus, .form-card textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border: 1px solid gray;
+    outline-width: 0;
+}
+
+.btn-info {
+	color: #ffffff !important;
+}
+
+/*Imaged Radio Buttons*/
+.radio-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.radio {
+    display:inline-block;
+    width: 204;
+    height: 64;
+    border-radius: 0;
+    background: lightblue;
+    box-sizing: border-box;
+    border: 2px solid lightgrey;
+    cursor:pointer;
+    margin: 8px 25px 8px 0px; 
+}
+
+.radio:hover {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.radio.selected {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+/*Fit image in bootstrap div*/
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* playstation page  */
+.pscarouselIM{
+  background-color: #D50000;
+  color: gold;
+  font-family: iron man;
+}
+.ironman{
+  background-color: #D50000;
+  color: gold;
+}
+.paraironman{
+  font-family: monospace;
+  color: beige;
+}
+
+  /* @keyframes slide-up {
+   0% {
+    transform: translateX(-100%);
+    filter: blur(5px);
+   }
+   100%{
+    transform: translateX(0);
+    filter: blur(0px);
+   }
+    
+  }
+
+  .animatedIronman{
+    animation-name: slide-up;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  } */
+

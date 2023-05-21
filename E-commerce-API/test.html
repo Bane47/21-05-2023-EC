@@ -1,0 +1,53 @@
+function fetchDataAndDisplay() {
+    fetch('http://localhost:3000/clothes')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          const clothesContainer = document.getElementById("clothesContainer");
+  
+          data.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('card', 'col-lg-4', 'hover-shadow');
+            card.id = 'card_' + item.id; // Set the card ID
+  
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+  
+            const title = document.createElement('h5');
+            title.classList.add('card-title', 'text-center');
+            title.textContent = item.category;
+  
+            const image = document.createElement('img');
+            image.classList.add('col-lg-12');
+            image.src = item.photo;
+            image.alt = "T-Shirt Image";
+  
+            const brand = document.createElement('p');
+            brand.classList.add('card-text', 'text-center', 'dressclr');
+            brand.textContent = item.brand;
+  
+            const price = document.createElement('p');
+            price.classList.add('dressclr', 'col-lg-6');
+            price.textContent = item.price;
+  
+            const size = document.createElement('p');
+            size.classList.add('dressclr', 'col-lg-6', 'text-center');
+            size.textContent = 'Size: ' + item.size;
+  
+            cardBody.appendChild(title);
+            cardBody.appendChild(image);
+            cardBody.appendChild(brand);
+            cardBody.appendChild(price);
+            cardBody.appendChild(size);
+            card.appendChild(cardBody);
+            clothesContainer.appendChild(card);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+  
+  fetchDataAndDisplay();
+  
