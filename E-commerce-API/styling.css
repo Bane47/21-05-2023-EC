@@ -365,3 +365,9 @@ html {
     animation-iteration-count: infinite;
   } */
 
+
+
+  /* comics page  */
+  .comicscarousel{
+    filter: brightness(0.3);
+  }
