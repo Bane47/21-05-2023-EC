@@ -1,0 +1,208 @@
+{
+  "Logins": [
+    {
+      "name": "Priyadarshan",
+      "username": "Darshan",
+      "email": "priyadarshanmanohraran@gmail.com",
+      "password": "Password123",
+      "id": 1
+    },
+    {
+      "name": "Srikanth",
+      "username": "me!",
+      "email": "srikanth@dmail.com",
+      "password": "sivajivailajilebi",
+      "id": 2
+    },
+    {
+      "name": "God",
+      "username": "Thunder",
+      "email": "darshan@g2technologies.com",
+      "password": "oooooooo",
+      "id": 3
+    },
+    {
+      "name": "ArulSeeli",
+      "username": "Darshan",
+      "email": "priyadarshanmanoharan@gmail.co",
+      "password": "Password123",
+      "id": 4
+    }
+  ],
+  "clothes": [
+    {
+      "id": 5,
+      "price": "20$",
+      "size": "M",
+      "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/DTG/mechanical-bat-logo-sweatshirt-india-438x438.jpg",
+      "brand": "Mechanical Bat-Logo - Batman Official Hoodie",
+      "category": "REDWOLF HOODIE"
+    },
+    {
+      "id": 6,
+      "price": "23$",
+      "size": "L",
+      "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/DTG/riri-williams-hoodie-india-438x438.jpg",
+      "brand": "Adidas",
+      "category": "Iron Man"
+    },
+    {
+      "id": 7,
+      "price": "18$",
+      "size": "M",
+      "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/DTG/spider-suits-art-hoodie-india-438x438.jpg",
+      "brand": "Nike",
+      "category": "Spidey"
+    },
+    {
+      "id": 8,
+      "price": "13$",
+      "size": "M",
+      "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/superman-black-suit-hoodie-india-2-438x438.jpg",
+      "brand": "Superman: The Black Suit - Justice League Official Hoodie",
+      "category": "Avengers"
+    },
+    {
+      "id": 9,
+      "price": "15$",
+      "size": "L",
+      "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/black-suit-mask-hoodie-india-438x438.jpg",
+      "brand": "Black Suit Mask - Marvel Official Hoodie",
+      "category": "Avengers"
+    },
+    {
+      "id": 10,
+      "price": "17$",
+      "size": "L",
+      "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/marvel-captain-america-mechanical-shield-sweatshirt-india-1-438x438.jpg",
+      "brand": "Adidas",
+      "category": "Avengers"
+    }
+  ],
+  "playstationCard": [
+    {
+      "id": 11,
+      "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202008/1423/s9nv5WsKbjbWLKMHnd4UZo1O.png?w=230&thumb=false",
+      "GameName": "Spider-Man",
+      "description": "Marvel's Spider-Man: Miles Morales"
+    },
+    {
+      "id": 12,
+      "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202205/2700/HNT7Av8LkRN6M3OiFe0DRq8T.png?w=230&thumb=false",
+      "GameName": "Wolverine",
+      "description": "Marvel's Midnight Suns for PS4™"
+    },
+    {
+      "id": 13,
+      "photo": "https://image.api.playstation.com/cdn/EP2026/CUSA05603_00/PjnogPh4vvs5ZguH8Yiu0x3tW0T5zudS.png?w=230&thumb=false",
+      "GameName": "Avengers",
+      "description": "Avengers infinity Wars"
+    },
+    {
+      "id": 14,
+      "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202111/1618/4JcAVGneAf7Q3cHCJGt0hRDZ.png?w=230&thumb=false",
+      "GameName": "Suicide Squad",
+      "description": "Vigilantism"
+    }
+  ],
+  "comics": [
+    {
+      "id": 15,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/5/a0/645111e2c5b2d/portrait_uncanny.jpg",
+      "name": "Avengers",
+      "price": "3.15"
+    },
+    {
+      "id": 16,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/2/c0/64511073ac6e1/portrait_uncanny.jpg",
+      "name": "Fantastic 4",
+      "price": "2.25"
+    },
+    {
+      "id": 17,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/3/a0/6451109c83f5f/portrait_uncanny.jpg",
+      "name": "Captain America",
+      "price": "3.19"
+    },
+    {
+      "id": 18,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/3/b0/6451109ee693d/portrait_uncanny.jpg",
+      "name": "X-Men",
+      "price": "1.11"
+    },
+    {
+      "id": 19,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/6/03/64511073808df/portrait_uncanny.jpg",
+      "name": "Spiderman",
+      "price": "2.25"
+    },
+    {
+      "id": 20,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/2/60/64511073a4ab2/portrait_uncanny.jpg",
+      "name": "Ghost Rider",
+      "price": "3.15"
+    },
+    {
+      "id": 21,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/f/f0/645111e3a0973/portrait_uncanny.jpg",
+      "name": "X-Men",
+      "price": "3.35"
+    },
+    {
+      "id": 22,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/f/d0/645110734a2b8/portrait_uncanny.jpg",
+      "name": "Predator",
+      "price": "2.95"
+    },
+    {
+      "id": 23,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/7/a0/569996296cebb/portrait_uncanny.jpg",
+      "name": "DeadPool",
+      "price": "3.95"
+    },
+    {
+      "id": 24,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/a/b0/4f689f1b9e8f4/portrait_uncanny.jpg",
+      "name": "Hulk",
+      "price": "4.15"
+    }
+  ],
+  "cart": [
+    {
+      "id": 20,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/2/60/64511073a4ab2/portrait_uncanny.jpg",
+      "name": "Ghost Rider",
+      "price": "3.15"
+    },
+    {
+      "id": 23,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/7/a0/569996296cebb/portrait_uncanny.jpg",
+      "name": "DeadPool",
+      "price": "3.95"
+    },
+    {
+      "id": 19,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/6/03/64511073808df/portrait_uncanny.jpg",
+      "name": "Spiderman",
+      "price": "2.25"
+    },
+    {
+      "id": 17,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/3/a0/6451109c83f5f/portrait_uncanny.jpg",
+      "name": "Captain America",
+      "price": "3.19"
+    },
+    {
+      "id": 16,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/2/c0/64511073ac6e1/portrait_uncanny.jpg",
+      "name": "Fantastic 4",
+      "price": "2.25"
+    },
+    {
+      "id": 15,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/5/a0/645111e2c5b2d/portrait_uncanny.jpg",
+      "name": "Avengers",
+      "price": "3.15"
+    }
+  ]
+}
