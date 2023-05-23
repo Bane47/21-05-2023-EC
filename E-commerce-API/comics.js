@@ -117,12 +117,21 @@ function addToCart(id) {
 
             xhttpAdd.send(JSON.stringify(itemDetails));
             Swal.fire({
-                icon:'Success',
+                icon:'success',
                 title:"Item added",
-                timer:1000,
-                showConfirmButton:false
-                })
-        }
+                timer:10000,
+                showConfirmButton:true,
+                confirmButtonText: 'View Cart',
+                showCancelButton: true, // Add showCancelButton option
+                cancelButtonText: 'Continue Shopping', 
+                willOpen:() =>{
+
+                }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                      window.location.href = 'cart.html';
+                    }
+        })
     };
 }
 
@@ -141,3 +150,4 @@ function showBill() {
     };
 }
 
+}

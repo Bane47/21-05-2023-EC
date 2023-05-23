@@ -29,7 +29,7 @@
     <script src="MDB/js/mdb.min.js"></script>
     <script type="text/javascript"></script>
 
-    <link rel="stylesheet" href="/E-commerce-API/bootstrap-5.3.0-alpha3-dist/css/styling.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/styling.css">
   </head>
   <body>
     <!-- Start your project here-->
@@ -43,10 +43,12 @@
         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
         <span class="input-group-text border-0" id="search-addon">
           <i class="fas fa-search"></i>
+          
         </span>
       </form>
     </div>
   </nav>
+
 
 
 <!-- carousel -->
@@ -75,44 +77,53 @@
 
 
 
-<div class="text-center  categories container-fluid mt-3">
-  <h1>Try The New Arrivals</h1>
-  <h3>Exclusive PlayStation Offers</h3>
-</div>
-<div class="container-fluid row ">
-  <div class="card col-sm-3 col-md-3 col-lg-3" >
-    <div class="card-body hover-zoom">
-      <img class="w-100 h-75 rounded " src="https://64.media.tumblr.com/4fe6d40d2d9af0f536b5caba676997d3/e45e7ec799d03224-5a/s540x810/729b834fa29b35d5c7146cb8bf9138954f3092cd.gif" alt="">
-      <h5 class="cat card-title">SpiderMan-3</h5>
-      <h6 class="cat card-subtitle mb-2 text-muted">Home Alone</h6>
+<div class="text-center   categories   arrivals ">
+  <h1 class=" text-center">Try The New Arrivals</h1>
+  <h3 class="text-center">Exclusive PlayStation Offers</h3>
+
+<div class="row">
+  <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3 " >
+    <a href="playstation.html"><div class="card-body hover-zoom">
+      <img class="w-100 h-75 rounded " src="https://i.gifer.com/WOKs.gif" alt="">
+      <h5 class="cat card-title mt-3">Batman</h5>
+      <h6 class="cat card-subtitle mb-2 ">Arkham Knight</h6>
     </div>
+  </a>
   </div>
-  <div class="card col-sm-3 col-md-3 col-lg-3" >
-    <div class="card-body hover-zoom">
+  <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3" >
+    <a href="playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded" src="https://i.pinimg.com/originals/f4/01/16/f40116eb12c2746e72198c98aab5f6fc.gif" alt="">
-      <h5 class="cat card-title">Iron Man</h5>
-      <h6 class="cat card-subtitle mb-2 text-muted">I am Iron Man</h6>
+      <h5 class="cat card-title mt-3">Iron Man</h5>
+      <h6 class="cat card-subtitle mb-2 ">I am Iron Man</h6>
     </div>
+  </a>
   </div>
-  <div class="card col-sm-3 col-md-3 col-lg-3" >
-    <div class="card-body hover-zoom">
+  </div>
+  <div class="row">
+  <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3" >
+    <a href="playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded" src="https://media.tenor.com/Aa66xUzSzSEAAAAC/thor-avengers.gif" alt="">
-      <h5 class="cat card-title">Thor</h5>
-      <h6 class="cat card-subtitle mb-2 text-muted">Thunder and Mystery</h6>
-    </div>
+      <h5 class="cat card-title mt-3">Thor</h5>
+      <h6 class="cat card-subtitle mb-2 ">Thunder and Mystery</h6>
+    </div></a>
   </div>
-  <div class="card col-sm-3 col-md-3 col-lg-3" >
-    <div class="card-body hover-zoom">
+  <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3" >
+    <a href="playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded" src="https://giffiles.alphacoders.com/214/214286.gif" alt="">
-      <h5 class="cat card-title">Doctor Strange</h5>
-      <h6 class="cat card-subtitle mb-2 text-muted">Strange Magic</h6>
+      <h5 class="cat card-title mt-3">Doctor Strange</h5>
+      <h6 class="cat card-subtitle mb-2 ">Strange Magic</h6>
     </div>
+    </a>
   </div>
+</div>
 </div>
  
 <!-- cards  -->
-<div>
+<div class="p-5 exTrends container-fluid">
+  <h1 class="display-3 text-center text-white ">Exclusive Trends</h1>
 
+<div>
+<a href="Clothes.html">
   <div class="card col-lg-6  container shadow">
     <div class="card-body row m-2">
       
@@ -121,11 +132,14 @@
 <h2 class="text-center m-1">Become a SuperHero!</h2>  
     </div>
   </div>
+</a>
+</div>
 </div>
 
 
-<div>
-  <div class="card container comics col-lg-8 slide shadow">
+<!-- <div class="comics p-5"> -->
+  <a href="comics.html">
+  <div class="card  comics  slide shadow">
     <div class="card-body text-center" id="comicbook">
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -150,16 +164,17 @@
       </div>
     </div>
   </div>
+</a>
 
-</div>
-
-
-
+<!-- </div> -->
 
 
 
 
-<footer class="bg-light text-center text-white">
+
+
+
+<footer class=" text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -224,7 +239,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-white" href="https://mdbootstrap.com/">Attire.com</a>
   </div>
   <!-- Copyright -->
 </footer>

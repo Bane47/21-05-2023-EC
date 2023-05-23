@@ -84,3 +84,65 @@ function fetchDataAndDisplay(){
             
 
 fetchDataAndDisplay();
+
+
+function addToCart(id) {
+  const cartItems = [];
+  const xhttp = new XMLHttpRequest();
+
+  xhttp.open("GET", `http://localhost:3000/comics/${id}`);
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+          console.log(id);
+          const itemDetails = JSON.parse(this.responseText);
+          console.log(itemDetails);
+
+          const xhttpAdd = new XMLHttpRequest();
+          xhttpAdd.open("POST", "http://localhost:3000/cart");
+          xhttpAdd.setRequestHeader("Content-Type", "application/json");
+          xhttpAdd.onload = function() {
+              if (xhttpAdd.status === 200) {
+                  const response = JSON.parse(xhttpAdd.responseText);
+                  cartItems.push(response);
+                  showBill();
+              }
+          };
+
+          xhttpAdd.send(JSON.stringify(itemDetails));
+          Swal.fire({
+              icon:'success',
+              title:"Item added",
+              timer:10000,
+              showConfirmButton:true,
+              confirmButtonText: 'View Cart',
+              showCancelButton: true, // Add showCancelButton option
+              cancelButtonText: 'Continue Shopping', 
+              willOpen:() =>{
+
+              }
+              }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = 'cart.html';
+                  }
+      })
+  };
+}
+
+function showBill() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://localhost:3000/cart");
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+          const objects = JSON.parse(this.responseText);
+          for (let object of objects) {
+              console.log(object);
+          }
+      }
+  };
+}
+
+}

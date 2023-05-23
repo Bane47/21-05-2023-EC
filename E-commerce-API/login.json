@@ -31,7 +31,7 @@
   ],
   "clothes": [
     {
-      "id": 5,
+      "id": 1,
       "price": "20$",
       "size": "M",
       "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/DTG/mechanical-bat-logo-sweatshirt-india-438x438.jpg",
@@ -39,23 +39,23 @@
       "category": "REDWOLF HOODIE"
     },
     {
-      "id": 6,
+      "id": 2,
       "price": "23$",
       "size": "L",
       "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/DTG/riri-williams-hoodie-india-438x438.jpg",
-      "brand": "Adidas",
+      "brand": "Arc Reactor (Glow In The Dark) - Marvel Official Hoodie",
       "category": "Iron Man"
     },
     {
-      "id": 7,
+      "id": 3,
       "price": "18$",
       "size": "M",
       "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/DTG/spider-suits-art-hoodie-india-438x438.jpg",
-      "brand": "Nike",
-      "category": "Spidey"
+      "brand": "Spider-Man Logo - Marvel Official Hoodie",
+      "category": "REDWOLF HOODIE"
     },
     {
-      "id": 8,
+      "id": 4,
       "price": "13$",
       "size": "M",
       "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/superman-black-suit-hoodie-india-2-438x438.jpg",
@@ -63,7 +63,7 @@
       "category": "Avengers"
     },
     {
-      "id": 9,
+      "id": 5,
       "price": "15$",
       "size": "L",
       "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/black-suit-mask-hoodie-india-438x438.jpg",
@@ -71,11 +71,11 @@
       "category": "Avengers"
     },
     {
-      "id": 10,
+      "id": 6,
       "price": "17$",
       "size": "L",
       "photo": "https://www.redwolf.in/image/cache/catalog/sweatshirts/marvel-captain-america-mechanical-shield-sweatshirt-india-1-438x438.jpg",
-      "brand": "Adidas",
+      "brand": "Captain America: Mechanical Shield - Marvel Official Hoodie",
       "category": "Avengers"
     }
   ],
@@ -203,6 +203,24 @@
       "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/5/a0/645111e2c5b2d/portrait_uncanny.jpg",
       "name": "Avengers",
       "price": "3.15"
+    },
+    {
+      "id": 18,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/3/b0/6451109ee693d/portrait_uncanny.jpg",
+      "name": "X-Men",
+      "price": "1.11"
+    },
+    {
+      "id": 21,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/f/f0/645111e3a0973/portrait_uncanny.jpg",
+      "name": "X-Men",
+      "price": "3.35"
+    },
+    {
+      "id": 22,
+      "poster": "https://cdn.marvel.com/u/prod/marvel/i/mg/f/d0/645110734a2b8/portrait_uncanny.jpg",
+      "name": "Predator",
+      "price": "2.95"
     }
   ]
 }

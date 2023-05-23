@@ -92,118 +92,12 @@ function fetchDataAndDisplay() {
           cardBody.appendChild(row);
           card.appendChild(cardBody);
           clothesContainer.appendChild(card);
-          // const card = document.createElement('div');
-          // card.classList.add('card', 'col-lg-4', 'hover-shadow');
-
-          // const cardBody = document.createElement('div');
-          // cardBody.classList.add('card-body');
-
-          // const title = document.createElement('h5');
-          // title.classList.add('card-title', 'text-center');
-          // title.textContent = item.category;
-
-          // const image = document.createElement('img');
-          // image.classList.add('col-lg-12');
-          // image.src = item.photo;
-          // image.alt = "T-Shirt Image";
-
-          // const brand = document.createElement('p');
-          // brand.classList.add('card-text', 'text-center', 'dressclr');
-          // brand.textContent = item.brand;
-
-          // const newdiv = document.createElement('div');
-          // newdiv.className= 'row';
-
-          // const price = document.createElement('p');
-          // price.classList.add('dressclr', 'col-lg-6');
-          // price.textContent = 'Cost:'+item.price;
-
-          
-          // const size = document.createElement('p');
-          // size.classList.add('dressclr', 'col-lg-6', 'text-center');
-          // size.textContent = 'Size: '+ item.size;
-
-          // // <div class="row">
-          // //   <div class="uiverse col-lg-6">
-          // //     <span class="tooltip">
-          // //       <i class="fa-solid fa-heart"></i>
-          // //     </span>
-          // //     <span>
-          // //       Add to wishlist <i class="fa-regular fa-heart"></i>
-          // //     </span>
-          // //   </div>
-          // //   <div class="uiverse cart col-lg-6">
-          // //     <span class="tooltip"><i class="fa-solid fa-cart-plus"></i></span>
-          // //     <span>
-          // //       Add to cart <i class="fa-brands fa-opencart"></i>
-          // //     </span>
-          // //   </div>
-          // // </div>
-          
-          // const row = document.createElement('div');
-          // row.classList.add('row');
-          
-          // const div3 = document.createElement('div');
-          // div3.classList.add('uiverse', 'col-lg-6');
-
-          // const tooltipSpan1 = document.createElement('span');
-          // tooltipSpan1.classList.add('tooltip');
-
-          // const heart = document.createElement('i');
-          // heart.classList.add('fa-solid','fa-heart');
-
-          // const wishList = document.createElement('span');
-          // wishList.textContent='Add to wishlist';
-
-          // const cartplus = document.createElement('i');
-          // cartplus.classList.add('fa-solid','fa-cart-plus');
-
-          // const tooltipSpan2 = document.createElement('span');
-          // tooltipSpan2.classList.add('tooltip');
-
-          // const div4 = document.createElement('div');
-          // div4.classList.add('uiverse','cart', 'col-lg-6')
-
-          // const cart = document.createElement('span');
-          // cart.textContent='Add to cart';
-
-          // const opencart = document.createElement('i');
-          // opencart.classList.add('fa-brands','fa-opencart');
-          // //<div class="uiverse cart col-lg-6">
-          // //     <span class="tooltip"><i class="fa-solid fa-cart-plus"></i></span>
-          // //     <span>
-          // //       Add to cart <i class="fa-brands fa-opencart"></i>
-          // //     </span>
-          // //   </div>
-     
-
-          // cardBody.appendChild(title);
-          // cardBody.appendChild(image);
-          // cardBody.appendChild(brand);
-          // cardBody.appendChild(newdiv);
-          // newdiv.appendChild(price);
-          // newdiv.appendChild(size);
-          // card.appendChild(cardBody);
-          // cardBody.appendChild(row);
-          // row.appendChild(div3);
-
-          // div3.appendChild(tooltipSpan1);
-          // tooltipSpan1.appendChild(heart);
-
-          // div3.appendChild(wishList);
-          // wishList.appendChild(heart);
-          
-          // div3.appendChild(tooltipSpan2);
-          // tooltipSpan2.appendChild(heart);
-
-          // div4.appendChild(cart);
-          
-          // div4.appendChild(tooltipSpan1);
-          // cart.appendChild(opencart);
 
 
-          // clothesContainer.appendChild(card);
-          
+          cartDiv.addEventListener('click',function addtocart(){
+            
+          })
+                   
         });
       }
     })
@@ -213,3 +107,65 @@ function fetchDataAndDisplay() {
 }
 
 fetchDataAndDisplay();
+
+
+function addToCart(id) {
+  const cartItems = [];
+  const xhttp = new XMLHttpRequest();
+
+  xhttp.open("GET", `http://localhost:3000/comics/${id}`);
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+          console.log(id);
+          const itemDetails = JSON.parse(this.responseText);
+          console.log(itemDetails);
+
+          const xhttpAdd = new XMLHttpRequest();
+          xhttpAdd.open("POST", "http://localhost:3000/cart");
+          xhttpAdd.setRequestHeader("Content-Type", "application/json");
+          xhttpAdd.onload = function() {
+              if (xhttpAdd.status === 200) {
+                  const response = JSON.parse(xhttpAdd.responseText);
+                  cartItems.push(response);
+                  showBill();
+              }
+          };
+
+          xhttpAdd.send(JSON.stringify(itemDetails));
+          Swal.fire({
+              icon:'success',
+              title:"Item added",
+              timer:10000,
+              showConfirmButton:true,
+              confirmButtonText: 'View Cart',
+              showCancelButton: true, // Add showCancelButton option
+              cancelButtonText: 'Continue Shopping', 
+              willOpen:() =>{
+
+              }
+              }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = 'cart.html';
+                  }
+      })
+  };
+}
+
+function showBill() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://localhost:3000/cart");
+  xhttp.send();
+
+  xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+          const objects = JSON.parse(this.responseText);
+          for (let object of objects) {
+              console.log(object);
+          }
+      }
+  };
+}
+
+}

@@ -1,4 +1,4 @@
-export var add = 0
+
 function fetchDataAndDisplay(){
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET","http://localhost:3000/cart");

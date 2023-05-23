@@ -8,18 +8,30 @@
   src: url(bootstrap-5.3.0-alpha3-dist/fonts/iron-man-of-war-2-ncv-font/IronManOfWar2Ncv-E85l.ttf);
 }
 
+/* logout button  */
 
-nav {
+/* login  */
+.login{
+  background-image: url("https://i.pinimg.com/564x/53/82/4f/53824f632c33b456e0cce00bc974607e.jpg");
+ background-blend-mode: darken;
+}
+.loginBox{
+  background-color: #f1b9b9;
+}
+
+nav{
   background: rgb(27, 27, 27);
 
 
 }
 
+
 .categories{
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .cat{
-    font-family: myfont;
+    font-family: monospace;
+    color: #121212;
 }
 
 .comics{
@@ -34,6 +46,22 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
   
 }
 
+.exTrends{
+background-color:#457fca;
+
+}
+.arrivals{
+background-image: url("https://i.pinimg.com/564x/47/87/5a/47875a3b900092d78ca117eff5c437bd.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+.pscard{
+  
+  background: #ffffff;  /* fallback for old browsers */
+}
+.psComics{
+  background-color: darkslateblue;
+}
 
 
 /* card  */
@@ -167,14 +195,10 @@ svg:hover .tooltip {
   }
   
 
-  /* login css  */
-  .login{
 
-    background: #c2e59c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-  }
+
+  /* login css  */
+ 
 
 
 
@@ -371,4 +395,11 @@ html {
   /* comics page  */
   .comicscarousel{
     filter: brightness(0.3);
+  }
+
+
+
+  /* footer  */
+  footer{
+    background-color: #121212;
   }
