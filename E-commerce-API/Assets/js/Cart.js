@@ -1,10 +1,12 @@
 
+
 function fetchDataAndDisplay(){
+    console.log("Hello")
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET","http://localhost:3000/cart");
     xhttp.send();
 
-    xhttp.onload= function(){
+    xhttp.onload= function(){ 
         if(this.readyState==4 && this.status==200){
             console.log(this.responseText);
             const objects = JSON.parse(this.responseText);

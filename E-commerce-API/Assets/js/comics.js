@@ -7,8 +7,8 @@ function fetchDataAndDisplay(){
 
             for(let i = 0; i<data.length;i+=5){
                 chtml +=      '<div class="container mt-3">'
-        chtml +=   '<div class="row ">'
-        chtml +=  '<div class="card col-lg-2 container" >'
+        chtml +=   '<div class="row p-5">'
+        chtml +=  '<div class="card col-lg-2 container " >'
         chtml +=   '<img src="'+data[i].poster+'" class="card-img-top link-offset-3-hover" alt="...">'
           chtml +=   '<h6 class="card-title">'+data[i].name+'</h6>'
           chtml +=       '<h6>Price:$'+data[i].price+'</h6>'

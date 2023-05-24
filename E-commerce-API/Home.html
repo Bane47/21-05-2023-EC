@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Index</title>
+    <title>Home</title>
+    <link rel="shortcut icon" href="./Assets/images/AttireLogo.png" type="image/x-icon">
+
+    
     <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
     <!-- MDB icon -->
@@ -29,7 +32,7 @@
     <script src="MDB/js/mdb.min.js"></script>
     <script type="text/javascript"></script>
 
-    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/styling.css">
+    <link rel="stylesheet" href="./Assets/css/styling.css">
   </head>
   <body>
     <!-- Start your project here-->
@@ -38,12 +41,18 @@
   <!-- nav bar  -->
   <nav class="navbar shadow p-2">
     <div class="container-fluid">
-      <a class="navbar-brand p-4 text-white"><h3>Attire</h3></a>
+      <span><a href="./Home.html" class="navbar-brand p-4 text-white"><h3><img class="col-lg-1" src="Assets/images/AttireLogo.png" alt="">Attire</h3></a></span>
       <form class="d-flex input-group w-auto">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span>
+          <a class="m-1 text-white" href="./comics.html">Comics</a>
+          <a class="m-1 text-white" href="/Clothes.html">Trends</a>
+          <a class="m-1 text-white" href="./playstation.html">Playstation</a>
+          <a class="m-1 text-white" href="./Cart.html">Cart</a>
+        </span>
+        <input type="search" class="ms-3 form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        
         <span class="input-group-text border-0" id="search-addon">
           <i class="fas fa-search"></i>
-          
         </span>
       </form>
     </div>
@@ -83,7 +92,7 @@
 
 <div class="row">
   <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3 " >
-    <a href="playstation.html"><div class="card-body hover-zoom">
+    <a href="./playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded " src="https://i.gifer.com/WOKs.gif" alt="">
       <h5 class="cat card-title mt-3">Batman</h5>
       <h6 class="cat card-subtitle mb-2 ">Arkham Knight</h6>
@@ -91,7 +100,7 @@
   </a>
   </div>
   <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3" >
-    <a href="playstation.html"><div class="card-body hover-zoom">
+    <a href="./playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded" src="https://i.pinimg.com/originals/f4/01/16/f40116eb12c2746e72198c98aab5f6fc.gif" alt="">
       <h5 class="cat card-title mt-3">Iron Man</h5>
       <h6 class="cat card-subtitle mb-2 ">I am Iron Man</h6>
@@ -101,14 +110,14 @@
   </div>
   <div class="row">
   <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3" >
-    <a href="playstation.html"><div class="card-body hover-zoom">
+    <a href="./playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded" src="https://media.tenor.com/Aa66xUzSzSEAAAAC/thor-avengers.gif" alt="">
       <h5 class="cat card-title mt-3">Thor</h5>
       <h6 class="cat card-subtitle mb-2 ">Thunder and Mystery</h6>
     </div></a>
   </div>
   <div class="card pscard col-sm-3 col-md-3 mx-1 mb-2 col-lg-3" >
-    <a href="playstation.html"><div class="card-body hover-zoom">
+    <a href="./playstation.html"><div class="card-body hover-zoom">
       <img class="w-100 h-75 rounded" src="https://giffiles.alphacoders.com/214/214286.gif" alt="">
       <h5 class="cat card-title mt-3">Doctor Strange</h5>
       <h6 class="cat card-subtitle mb-2 ">Strange Magic</h6>
@@ -123,7 +132,7 @@
   <h1 class="display-3 text-center text-white ">Exclusive Trends</h1>
 
 <div>
-<a href="Clothes.html">
+<a href="./Clothes.html">
   <div class="card col-lg-6  container shadow">
     <div class="card-body row m-2">
       
@@ -138,7 +147,7 @@
 
 
 <!-- <div class="comics p-5"> -->
-  <a href="comics.html">
+  <a href="./comics.html">
   <div class="card  comics  slide shadow">
     <div class="card-body text-center" id="comicbook">
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -239,7 +248,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">Attire.com</a>
+    <a class="text-white" href="./Home.html">Attire.com</a>
   </div>
   <!-- Copyright -->
 </footer>

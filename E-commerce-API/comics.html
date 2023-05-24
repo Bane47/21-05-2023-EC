@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comics</title>
-  <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="./Assets/images/AttireLogo.png" type="image/x-icon">
+
+
+  <script src="./Assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
   <!-- Font Awesome -->
@@ -15,16 +18,16 @@
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
-  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="./MDB/css/mdb.min.css" />
 
   <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="./MDB/js/mdb.min.js"></script>
   <link rel="stylesheet" href="MDB/css/mdb.min.css">
   <!-- Custom scripts -->
   <script src="MDB/js/mdb.min.js"></script>
   <script type="text/javascript"></script>
 
-  <link rel="stylesheet" href="/E-commerce-API/bootstrap-5.3.0-alpha3-dist/css/styling.css">
+  <link rel="stylesheet" href="./Assets/css/styling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -33,16 +36,39 @@
   <!-- styling  -->
  <!-- sweetalert cdn -->
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
- <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/styling.css">
+ <link rel="stylesheet" href="./Assets/js/comics.js">
 
+ 
+
+ <style>
+  .card {
+  /* Card styles */
+  width: 200px;
+  height: 300px;
+  background-color: #f1f1f1;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  /* Animation styles */
+  transform: scale(1.1);
+}
+ </style>
 </head>
 
 <body>
   <nav class="navbar shadow p-2">
     <div class="container-fluid">
-      <a class="navbar-brand p-4 text-white"><h3>Attire</h3></a>
+      <span><a href="./Home.html" class="navbar-brand p-4 text-white"><h3><img class="col-lg-1 col-md-1 col-sm-1 col-1" src="Assets/images/AttireLogo.png" alt="">Attire</h3></a></span>
       <form class="d-flex input-group w-auto">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span>
+          <a class="m-1 text-white" href="./comics.html">Comics</a>
+          <a class="m-1 text-white" href="/Clothes.html">Trends</a>
+          <a class="m-1 text-white" href="./playstation.html">Playstation</a>
+          <a class="m-1 text-white" href="./Cart.html">Cart</a>
+        </span>
+        <input type="search" class="ms-3 form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        
         <span class="input-group-text border-0" id="search-addon">
           <i class="fas fa-search"></i>
         </span>
@@ -101,7 +127,7 @@
     
   </div>
 
-  <footer class=" text-center text-white p-2 mt-2">
+  <footer class=" text-center text-white p-2 mt-lg-5 mt-sm-5 mt-md-5">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
@@ -176,7 +202,7 @@
 
 
 
-  <script src="comics.js"></script>
+  <script src="./Assets/js/comics.js"></script>
 
 
 

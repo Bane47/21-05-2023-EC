@@ -93,7 +93,7 @@ function login() {
   
         if (isAuthenticated) {
           
-          window.location.href="/index.html"
+          window.location.href="./Home.html"
         } else {
           console.log("Unsuccessful");
         }
