@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./Assets/images/AttireLogo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <script src="Assets/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <script>
+        var add = 0;
+
+function fetchDataAndDisplay() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://localhost:3000/cart");
+  xhttp.send();
+
+  xhttp.onload = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      const objects = JSON.parse(this.responseText);
+
+      var html = "";
+
+      for (let object of objects) {
+        html += '<tr>';
+        html += '<td>' + object.name + '</td>';
+        html += '<td>' + object.price + '</td>';
+        html += '</tr>';
+
+        add += parseFloat(object.price);
+      }
+
+      document.getElementById("itemBill").innerHTML = html;
+      document.getElementById("paymentTotal").innerHTML = add;
+
+      // Call initPayPalButton with the updated total price
+      
+    }
+  }
+}
+    </script>
+    <nav class="navbar shadow p-2">
+        <div class="container-fluid">
+          <span><a href="./Home.html" class="navbar-brand p-4 text-white"><h3><img class="col-lg-1" src="Assets/images/AttireLogo.png" alt="">Attire</h3></a></span>
+          <form class="d-flex input-group w-auto">
+            <span>
+              <a class="m-1 text-white" href="./comics.html">Comics</a>
+              <a class="m-1 text-white" href="/Clothes.html">Trends</a>
+              <a class="m-1 text-white" href="./playstation.html">Playstation</a>
+              <a class="m-1 text-white" href="./Cart.html">Cart</a>
+            </span>
+            <input type="search" class="ms-3 form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </form>
+        </div>
+      </nav>
+        <div class="container-fluid">
+            <div class="row justify-content-center container pt-3">
+                <div class="col-12 col-lg-11">
+                    <div class="card card0 rounded-0">
+                        <div class="row">
+                            <div class="col-md-5 d-md-block d-none p-0 box">
+                                <div class="card rounded-0 border-0 col-lg-12  card1" id="bill">
+                                
+                                    <div>
+                                        <h1 class="p-2 text-center">Payment Summary</h1>
+                                        <table class="table table-dark table-bordered container p-3 shadow">
+                                            <thead>
+                                              <tr>
+                                                <th class="fs-4">Item Name</th>
+                                                <th class="fs-4">Price ($)</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="itemBill"></tbody>
+                                            <tfoot class="alert-danger table-secondary">
+                                              <th class="fw-bolder">Total $</th>
+                                            <td id="amount"></td>
+                                            </tfoot>
+                                          </table>
+                                      </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5  offset-2  col-sm-12 p-0 box ">
+                                <div class="card rounded-0 border-0 card2" id="paypage">
+                                    <div class="form-card">
+                                        <h2 id="heading2" class="text-danger">Payment Method</h2>
+                                        <div class="radio-group row mb-4">
+                                            <div class='radio ' data-value="credit"><img
+                                                    src=""
+                                                    class="col-lg-5" ></div>
+                                            <div class='radio col-lg-3' data-value="paypal"><img
+                                                    src="" class="col-lg-12"></div>
+                                            <br>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                              <label class="pay mt-3">Name on Card</label>
+                                              <input type="text" name="holdername" placeholder="Account Holder Name">
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <label class="pay">Card Number</label>
+                                              <input type="text" name="cardno" id="cr_no" placeholder="0000-0000-0000-0000" minlength="19" maxlength="19">
+                                            </div>
+                                            <div class="col-md-6">
+                                              <label class="pay mt-3">CVV</label>
+                                              <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3">
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <label class="pay">Expiration Date</label>
+                                              <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5">
+                                            </div>
+                                          </div>
+                                          
+                                          <button id="pay-button" class="btn btn-primary">Pay</button>
+    
+                                          
+                                          
+                                        <!-- <div class="product-container">
+                                            <div class="product-image-container">
+                                            </div>
+                                            <div class="product-info-container">
+    
+                                                <div id="smart-button-container">
+                                                    <div style="text-align: center;">
+                                                        <div id="paypal-button-container" class="col-lg-9 mt-4"></div>
+                                                    </div>
+                                                </div>
+                                                <script src="https://www.paypal.com/sdk/js?client-id=AZkuVa3m-mADuH4iLiJ35JwBRZKN9bgQc9FkwbchSHGiV8erWu6ul_Nd-RGhPpFZp0qx2lc5HnYtpZli&enable-funding=venmo&currency=USD&vault=true&intent=capture"></script>
+                                                <script
+                                                    src="https://www.paypal.com/sdk/js?client-id=AZkuVa3m-mADuH4iLiJ35JwBRZKN9bgQc9FkwbchSHGiV8erWu6ul_Nd-RGhPpFZp0qx2lc5HnYtpZli&enable-funding=venmo&currency=USD&vault=true&intent=capture"
+                                                    data-sdk-integration-source="button-factory"></script> -->
+                                                <!-- <script type="text/javascript" src="./Assets/js/script.js"></script> -->
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AZkuVa3m-mADuH4iLiJ35JwBRZKN9bgQc9FkwbchSHGiV8erWu6ul_Nd-RGhPpFZp0qx2lc5HnYtpZli&currency=USD"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container"></div>
+    <script>
+      paypal.Buttons({
+        // Order is created on the server and the order ID is returned
+        createOrder: function() {
+          return fetch("/my-server/create-paypal-order", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // use the "body" param to optionally pass additional order information
+            // like product SKUs and quantities
+            body: JSON.stringify({
+              cart: [
+                {
+                  sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+                  quantity: "YOUR_PRODUCT_QUANTITY",
+                },
+              ],
+            }),
+          })
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(order) {
+            return order.id;
+          });
+        },
+        // Finalize the transaction on the server after payer approval
+        onApprove: function(data) {
+          return fetch("/my-server/capture-paypal-order", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              orderID: data.orderID,
+            }),
+          })
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(orderData) {
+            // Successful capture! For dev/demo purposes:
+            console.log("Capture result", orderData, JSON.stringify(orderData, null, 2));
+            var transaction = orderData.purchase_units[0].payments.captures[0];
+            alert("Transaction " + transaction.status + ": " + transaction.id + "\n\nSee console for all available details");
+            // When ready to go live, remove the alert and show a success message within this page. For example:
+            // var element = document.getElementById('paypal-button-container');
+            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+            // Or go to another URL:  window.location.href = 'thank_you.html';
+          });
+        },
+      }).render("#paypal-button-container");
+    </script>
+  </body>
+</html>

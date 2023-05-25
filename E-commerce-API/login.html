@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="./Assets/images/AttireLogo.png" type="image/x-icon">
 
     
-  <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+  <script src="./Assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
   <!-- Font Awesome -->
@@ -20,13 +20,13 @@
   <link rel="stylesheet" href="css/mdb.min.css" />
 
   <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="./Assets/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="MDB/css/mdb.min.css">
   <!-- Custom scripts -->
   <script src="MDB/js/mdb.min.js"></script>
   <script type="text/javascript"></script>
 
-  <link rel="stylesheet" href="/E-commerce-API/bootstrap-5.3.0-alpha3-dist/css/styling.css">
+  <link rel="stylesheet" href="/E-commerce-API/./Assets/css/styling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -170,6 +170,124 @@
 
 <!-- Modal -->
 <!-- <div id="modaldiv"></div> -->
+
+<script>(function () {
+  'use strict';
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation');
+
+  // Loop over each form and prevent submission
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        // Additional custom validations
+        if (form.id === 'loginForm') {
+          // Validate login form
+          var username = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+
+          if (username.trim() === '') {
+            displayErrorMessage('username', 'Please enter a username.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('username');
+          }
+
+          if (password.trim() === '') {
+            displayErrorMessage('password', 'Please enter a password.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else if (password.length < 8) {
+            displayErrorMessage('password', 'Password must be at least 8 characters long.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('password');
+          }
+        } else if (form.id === 'registerForm') {
+          // Validate register form
+          var name = document.getElementById('name').value;
+          var username = document.getElementById('uname').value;
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('pwd').value;
+          var confirmPassword = document.getElementById('repwd').value;
+
+          if (name.trim() === '') {
+            displayErrorMessage('name', 'Please enter your name.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('name');
+          }
+
+          if (username.trim() === '') {
+            displayErrorMessage('uname', 'Please choose a username.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('uname');
+          }
+
+          if (email.trim() === '') {
+            displayErrorMessage('email', 'Please enter a valid email.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('email');
+          }
+
+          if (password.trim() === '') {
+            displayErrorMessage('pwd', 'Please enter a password.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else if (password.length < 8) {
+            displayErrorMessage('pwd', 'Password must be at least 8 characters long.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('pwd');
+          }
+
+          if (confirmPassword.trim() === '') {
+            displayErrorMessage('repwd', 'Please confirm the password.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else if (confirmPassword !== password) {
+            displayErrorMessage('repwd', 'Passwords do not match.');
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            removeErrorMessage('repwd');
+          }
+        }
+      }
+
+      form.classList.add('was-validated');
+    }, false);
+  });
+
+  // Function to display error message
+  function displayErrorMessage(inputId, message) {
+    var input = document.getElementById(inputId);
+    var feedback = input.parentNode.querySelector('.invalid-feedback');
+    feedback.innerText = message;
+    input.classList.add('is-invalid');
+  }
+
+  // Function to remove error message
+  function removeErrorMessage(inputId) {
+    var input = document.getElementById(inputId);
+    var feedback = input.parentNode.querySelector('.invalid-feedback');
+    feedback.innerText = '';
+    input.classList.remove('is-invalid');
+  }
+})();
+</script>
 
 </body>
 </html>
